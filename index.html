@@ -1,0 +1,606 @@
+<html lang="en" style="zoom: 1.3; -webkit-text-size-adjust: 130%;"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OCMA - Omni-Channel Marketing Agent</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body style="zoom: 1.3;">
+    <div class="app-container">
+        <!-- Header -->
+        <header class="app-header">
+            <div class="container">
+                <div class="header-content">
+                    <div class="brand">
+                        <h1 class="brand-title">OCMA</h1>
+                        <p class="brand-subtitle">Omni-Channel Marketing Agent</p>
+                    </div>
+                    <div class="brand-logo">
+                        <span class="logo-shield">🛡️</span>
+                        <span class="logo-text">ScamShield</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Navigation -->
+        <nav class="app-nav">
+            <div class="container">
+                <div class="nav-tabs">
+                    <button class="nav-tab" data-tab="integrations">Integrations</button>
+                    <button class="nav-tab" data-tab="strategy">Strategy</button>
+                    <button class="nav-tab" data-tab="content">Content</button>
+                    <button class="nav-tab active" data-tab="github-export">GitHub Export</button>
+                    <button class="nav-tab" data-tab="dashboard">Dashboard</button>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="app-main">
+            <div class="container">
+                
+                <!-- Integrations Tab -->
+                <div id="integrations-tab" class="tab-content" style="display: none;">
+                    <div class="tab-header">
+                        <h2>Platform Integrations</h2>
+                        <p>Connect your marketing tools and platforms with secure API credentials.</p>
+                        <div class="tab-actions">
+                            <button class="btn btn--outline" id="exportConfig">Export Config</button>
+                            <button class="btn btn--outline" id="importConfig">Import Config</button>
+                            <input type="file" id="configFileInput" accept=".json" style="display: none;">
+                        </div>
+                    </div>
+
+                    <div class="integration-categories">
+                        <div class="category-nav">
+                            <button class="category-btn active" data-category="social">Social Media</button>
+                            <button class="category-btn" data-category="marketing">Marketing Tools</button>
+                            <button class="category-btn" data-category="automation">Automation &amp; Other</button>
+                        </div>
+
+                        <div class="integration-grid" id="integrationGrid"><div class="integration-card " data-platform="X/Twitter">
+    <div class="integration-header">
+      <div class="integration-icon">🐦</div>
+      <div class="integration-info">
+        <h3>X/Twitter</h3>
+        <div class="connection-status">
+          <span class="status status--error">
+            Disconnected
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class="integration-fields">
+      7 fields (4 required)
+    </div>
+    <div class="integration-actions">
+      <button class="btn btn--primary btn--sm configure-btn" data-platform="X/Twitter">
+        Configure
+      </button>
+      
+    </div>
+  </div><div class="integration-card " data-platform="Facebook/Instagram">
+    <div class="integration-header">
+      <div class="integration-icon">📘</div>
+      <div class="integration-info">
+        <h3>Facebook/Instagram</h3>
+        <div class="connection-status">
+          <span class="status status--error">
+            Disconnected
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class="integration-fields">
+      8 fields (6 required)
+    </div>
+    <div class="integration-actions">
+      <button class="btn btn--primary btn--sm configure-btn" data-platform="Facebook/Instagram">
+        Configure
+      </button>
+      
+    </div>
+  </div><div class="integration-card " data-platform="LinkedIn">
+    <div class="integration-header">
+      <div class="integration-icon">💼</div>
+      <div class="integration-info">
+        <h3>LinkedIn</h3>
+        <div class="connection-status">
+          <span class="status status--error">
+            Disconnected
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class="integration-fields">
+      4 fields (3 required)
+    </div>
+    <div class="integration-actions">
+      <button class="btn btn--primary btn--sm configure-btn" data-platform="LinkedIn">
+        Configure
+      </button>
+      
+    </div>
+  </div><div class="integration-card " data-platform="TikTok">
+    <div class="integration-header">
+      <div class="integration-icon">🎵</div>
+      <div class="integration-info">
+        <h3>TikTok</h3>
+        <div class="connection-status">
+          <span class="status status--error">
+            Disconnected
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class="integration-fields">
+      3 fields (3 required)
+    </div>
+    <div class="integration-actions">
+      <button class="btn btn--primary btn--sm configure-btn" data-platform="TikTok">
+        Configure
+      </button>
+      
+    </div>
+  </div><div class="integration-card " data-platform="Discord">
+    <div class="integration-header">
+      <div class="integration-icon">🎮</div>
+      <div class="integration-info">
+        <h3>Discord</h3>
+        <div class="connection-status">
+          <span class="status status--error">
+            Disconnected
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class="integration-fields">
+      3 fields (3 required)
+    </div>
+    <div class="integration-actions">
+      <button class="btn btn--primary btn--sm configure-btn" data-platform="Discord">
+        Configure
+      </button>
+      
+    </div>
+  </div><div class="integration-card " data-platform="YouTube">
+    <div class="integration-header">
+      <div class="integration-icon">📺</div>
+      <div class="integration-info">
+        <h3>YouTube</h3>
+        <div class="connection-status">
+          <span class="status status--error">
+            Disconnected
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class="integration-fields">
+      4 fields (1 required)
+    </div>
+    <div class="integration-actions">
+      <button class="btn btn--primary btn--sm configure-btn" data-platform="YouTube">
+        Configure
+      </button>
+      
+    </div>
+  </div></div>
+                    </div>
+                </div>
+
+                <!-- Strategy Tab -->
+                <div id="strategy-tab" class="tab-content" style="display: none;">
+                    <div class="tab-header">
+                        <h2>Strategy Management</h2>
+                        <p>Upload existing strategies or create new ones using our templates.</p>
+                    </div>
+
+                    <div class="strategy-content">
+                        <div class="upload-section">
+                            <div class="upload-area" id="strategyUpload">
+                                <div class="upload-icon">📁</div>
+                                <h3>Upload Strategy</h3>
+                                <p>Drag and drop your strategy files here or click to browse</p>
+                                <p class="upload-formats">Supports: PDF, DOCX, TXT, MD</p>
+                                <input type="file" id="strategyFileInput" accept=".pdf,.docx,.txt,.md" multiple="" style="display: none;">
+                                <button class="btn btn--primary" id="browseStrategy">Browse Files</button>
+                            </div>
+                        </div>
+
+                        <div class="strategy-sidebar">
+                            <div class="card">
+                                <div class="card__body">
+                                    <h3>Strategy Templates</h3>
+                                    <div class="template-list" id="strategyTemplates">
+                                        <!-- Populated by JavaScript -->
+                                    <div class="template-item">Zero-Budget Marketing Strategy</div><div class="template-item">Product Launch Strategy</div><div class="template-item">Brand Awareness Campaign</div><div class="template-item">Lead Generation Strategy</div><div class="template-item">Content Marketing Plan</div></div>
+                                    <button class="btn btn--primary btn--full-width mt-8" id="generateStrategy">Generate New Strategy</button>
+                                </div>
+                            </div>
+
+                            <div class="card">
+                                <div class="card__body">
+                                    <h3>Current Strategy</h3>
+                                    <div class="current-strategy" id="currentStrategy"><p class="text-secondary">No strategy loaded</p></div>
+                                    <button class="btn btn--secondary btn--full-width mt-8" id="exportStrategy" disabled="">Export Strategy</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Content Tab -->
+                <div id="content-tab" class="tab-content" style="display: none;">
+                    <div class="tab-header">
+                        <h2>Content Management</h2>
+                        <p>Manage your content library and upload new content assets.</p>
+                    </div>
+
+                    <div class="content-layout">
+                        <div class="content-main">
+                            <div class="upload-section">
+                                <div class="upload-area" id="contentUpload">
+                                    <div class="upload-icon">📄</div>
+                                    <h3>Upload Content</h3>
+                                    <p>Drag and drop your content files here or click to browse</p>
+                                    <p class="upload-formats">Supports: PDF, DOCX, TXT, MD, JSON, CSV</p>
+                                    <input type="file" id="contentFileInput" accept=".pdf,.docx,.txt,.md,.json,.csv" multiple="" style="display: none;">
+                                    <button class="btn btn--primary" id="browseContent">Browse Files</button>
+                                </div>
+                            </div>
+
+                            <div class="content-library">
+                                <h3>Content Library</h3>
+                                <div class="library-toolbar">
+                                    <input type="search" class="form-control" placeholder="Search content..." id="contentSearch">
+                                    <button class="btn btn--secondary" id="bulkUpload">Bulk Upload</button>
+                                </div>
+                                <div class="content-grid" id="contentGrid"><div class="content-placeholder"><p>No content uploaded yet. Upload files to see them here.</p></div></div>
+                            </div>
+                        </div>
+
+                        <div class="content-sidebar">
+                            <div class="card">
+                                <div class="card__body">
+                                    <h3>Content Templates</h3>
+                                    <div class="template-list" id="contentTemplates">
+                                        <!-- Populated by JavaScript -->
+                                    <div class="template-item">Social Media Content Calendar</div><div class="template-item">Email Marketing Templates</div><div class="template-item">Blog Content Templates</div><div class="template-item">Ad Copy Templates</div><div class="template-item">Video Script Templates</div></div>
+                                    <button class="btn btn--primary btn--full-width mt-8" id="generateContent">Generate Content</button>
+                                </div>
+                            </div>
+
+                            <div class="card">
+                                <div class="card__body">
+                                    <h3>Content Calendar</h3>
+                                    <div class="calendar-preview">
+                                        <p class="text-secondary">Calendar view coming soon</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- GitHub Export Tab -->
+                <div id="github-export-tab" class="tab-content active" style="display: block;">
+                    <div class="tab-header">
+                        <h2>Export to GitHub</h2>
+                        <p>Export your complete OCMA application codebase to a GitHub repository with working functionality.</p>
+                        <div class="security-notice">
+                            <div class="notice-icon">🔒</div>
+                            <p>Your credentials are only used for this export and are not stored permanently.</p>
+                        </div>
+                    </div>
+
+                    <div class="github-export-container">
+                        <div class="github-export-main">
+                            <div class="github-form-section" style="display: none;">
+                                <form id="githubExportForm">
+                                    <div class="form-group">
+                                        <label for="githubUsername" class="form-label">GitHub Username</label>
+                                        <input type="text" id="githubUsername" class="form-control" placeholder="your-username" required="">
+                                        <div class="field-help">Your GitHub username (not email address)</div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="repositoryName" class="form-label">Repository Name</label>
+                                        <input type="text" id="repositoryName" class="form-control" placeholder="ocma-platform" required="" pattern="^[a-zA-Z0-9._-]+$">
+                                        <div class="field-help">Repository name (letters, numbers, dots, hyphens, and underscores only)</div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="githubToken" class="form-label">Personal Access Token</label>
+                                        <div class="password-field">
+                                            <input type="password" id="githubToken" class="form-control" placeholder="ghp_xxxxxxxxxxxxxxxxxxxx" required="">
+                                            <button type="button" class="password-toggle" id="toggleGithubToken">👁️</button>
+                                        </div>
+                                        <div class="field-help">Your GitHub Personal Access Token with repository permissions</div>
+                                    </div>
+
+                                    <div class="form-actions">
+                                        <button type="submit" class="btn btn--primary btn--lg export-btn" id="exportToGithub">
+                                            <span class="btn-text">Export to GitHub</span>
+                                            <span class="btn-icon">🚀</span>
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
+
+                            <div class="export-progress" id="exportProgress" style="display: block;">
+                                <div class="progress-header">
+                                    <h3>Exporting to GitHub...</h3>
+                                    <div class="progress-bar">
+                                        <div class="progress-fill" id="progressFill" style="width: 20.833333%;"></div>
+                                    </div>
+                                </div>
+                                <div class="progress-steps" id="progressSteps"><div class="progress-step completed">
+        <div class="step-icon">✓</div>
+        <div class="step-text">Validating GitHub credentials...</div>
+      </div><div class="progress-step completed">
+        <div class="step-icon">✓</div>
+        <div class="step-text">Creating repository...</div>
+      </div><div class="progress-step active">
+        <div class="step-icon">3</div>
+        <div class="step-text">Preparing HTML file...</div>
+      </div><div class="progress-step">
+        <div class="step-icon">4</div>
+        <div class="step-text">Uploading index.html...</div>
+      </div><div class="progress-step">
+        <div class="step-icon">5</div>
+        <div class="step-text">Preparing CSS file...</div>
+      </div><div class="progress-step">
+        <div class="step-icon">6</div>
+        <div class="step-text">Uploading style.css...</div>
+      </div><div class="progress-step">
+        <div class="step-icon">7</div>
+        <div class="step-text">Preparing JavaScript file...</div>
+      </div><div class="progress-step">
+        <div class="step-icon">8</div>
+        <div class="step-text">Uploading app.js...</div>
+      </div><div class="progress-step">
+        <div class="step-icon">9</div>
+        <div class="step-text">Creating README.md...</div>
+      </div><div class="progress-step">
+        <div class="step-icon">10</div>
+        <div class="step-text">Creating package.json...</div>
+      </div><div class="progress-step">
+        <div class="step-icon">11</div>
+        <div class="step-text">Creating .gitignore...</div>
+      </div><div class="progress-step">
+        <div class="step-icon">12</div>
+        <div class="step-text">Export complete!</div>
+      </div></div>
+                            </div>
+
+                            <div class="export-success" id="exportSuccess" style="display: none;">
+                                <div class="success-icon">✅</div>
+                                <h3>Export Complete!</h3>
+                                <p>Your OCMA platform has been successfully exported to GitHub with real working functionality.</p>
+                                <div class="success-actions">
+                                    <a href="#" id="githubRepoLink" target="_blank" class="btn btn--primary">
+                                        View Repository
+                                    </a>
+                                    <button type="button" class="btn btn--secondary" id="exportAnother">
+                                        Export Another
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="export-error" id="exportError" style="display: none;">
+                                <div class="error-icon">❌</div>
+                                <h3>Export Failed</h3>
+                                <p id="errorMessage">An error occurred during export.</p>
+                                <div class="error-actions">
+                                    <button type="button" class="btn btn--primary" id="retryExport">
+                                        Try Again
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="github-sidebar">
+                            <div class="card">
+                                <div class="card__body">
+                                    <h3>How to Get Your Token</h3>
+                                    <div class="help-steps">
+                                        <div class="help-step">
+                                            <span class="step-number">1</span>
+                                            <div class="step-content">
+                                                <p>Go to GitHub Settings</p>
+                                                <small>github.com → Settings → Developer settings</small>
+                                            </div>
+                                        </div>
+                                        <div class="help-step">
+                                            <span class="step-number">2</span>
+                                            <div class="step-content">
+                                                <p>Personal Access Tokens</p>
+                                                <small>Click "Tokens (classic)" → "Generate new token"</small>
+                                            </div>
+                                        </div>
+                                        <div class="help-step">
+                                            <span class="step-number">3</span>
+                                            <div class="step-content">
+                                                <p>Select Permissions</p>
+                                                <small>Check "repo" for full repository access</small>
+                                            </div>
+                                        </div>
+                                        <div class="help-step">
+                                            <span class="step-number">4</span>
+                                            <div class="step-content">
+                                                <p>Copy Your Token</p>
+                                                <small>Save it securely - you won't see it again!</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a href="https://github.com/settings/tokens" target="_blank" class="btn btn--secondary btn--full-width mt-8">
+                                        Get Token
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="card">
+                                <div class="card__body">
+                                    <h3>Export History</h3>
+                                    <div class="export-history" id="exportHistory"><p class="text-secondary">No exports yet</p></div>
+                                </div>
+                            </div>
+
+                            <div class="card">
+                                <div class="card__body">
+                                    <h3>What Gets Exported</h3>
+                                    <div class="export-files">
+                                        <div class="file-item">
+                                            <span class="file-icon">📄</span>
+                                            <span class="file-name">index.html</span>
+                                        </div>
+                                        <div class="file-item">
+                                            <span class="file-icon">🎨</span>
+                                            <span class="file-name">style.css</span>
+                                        </div>
+                                        <div class="file-item">
+                                            <span class="file-icon">⚡</span>
+                                            <span class="file-name">app.js</span>
+                                        </div>
+                                        <div class="file-item">
+                                            <span class="file-icon">📋</span>
+                                            <span class="file-name">README.md</span>
+                                        </div>
+                                        <div class="file-item">
+                                            <span class="file-icon">📦</span>
+                                            <span class="file-name">package.json</span>
+                                        </div>
+                                        <div class="file-item">
+                                            <span class="file-icon">🚫</span>
+                                            <span class="file-name">.gitignore</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dashboard Tab -->
+                <div id="dashboard-tab" class="tab-content" style="display: none;">
+                    <div class="tab-header">
+                        <h2>Dashboard</h2>
+                        <p>Overview of your marketing automation setup and activity.</p>
+                    </div>
+
+                    <div class="dashboard-grid">
+                        <div class="dashboard-card">
+                            <h3>Integration Status</h3>
+                            <div class="status-grid" id="integrationStatus">
+                                <!-- Populated by JavaScript -->
+                            </div>
+                        </div>
+
+                        <div class="dashboard-card">
+                            <h3>Strategy Status</h3>
+                            <div class="strategy-status" id="strategyStatus">
+                                <div class="status-item">
+                                    <span class="status status--info">Not Loaded</span>
+                                    <span>Current Strategy</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="dashboard-card">
+                            <h3>Content Library</h3>
+                            <div class="content-stats" id="contentStats">
+                                <div class="stat-item">
+                                    <span class="stat-number" id="contentCount">0</span>
+                                    <span class="stat-label">Files</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="dashboard-card">
+                            <h3>GitHub Exports</h3>
+                            <div class="github-stats" id="githubStats">
+                                <div class="stat-item">
+                                    <span class="stat-number" id="exportCount">0</span>
+                                    <span class="stat-label">Successful Exports</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="dashboard-card">
+                            <h3>Recent Activity</h3>
+                            <div class="activity-log" id="activityLog">
+                                <p class="text-secondary">No recent activity</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Integration Configuration Modal -->
+    <div class="modal-overlay" id="integrationModal">
+        <div class="modal integration-modal">
+            <div class="modal-header">
+                <h3 id="modalTitle">Configure Integration</h3>
+                <button class="modal-close" id="modalClose">×</button>
+            </div>
+            <div class="modal-body">
+                <div class="integration-info">
+                    <div class="integration-icon" id="modalIcon"></div>
+                    <div class="integration-details">
+                        <h4 id="modalPlatformName"></h4>
+                        <div class="connection-status" id="modalStatus">
+                            <span class="status status--error">Disconnected</span>
+                        </div>
+                    </div>
+                </div>
+                <form id="integrationForm">
+                    <div class="form-fields" id="modalFormFields">
+                        <!-- Populated by JavaScript -->
+                    </div>
+                    <div class="modal-actions">
+                        <button type="button" class="btn btn--outline" id="testConnection">Test Connection</button>
+                        <button type="button" class="btn btn--outline" id="cancelModal">Cancel</button>
+                        <button type="submit" class="btn btn--primary">Save Credentials</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Notification Styles for JavaScript -->
+    <style>
+        @keyframes slideInRight {
+            from {
+                transform: translateX(100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideOutRight {
+            from {
+                transform: translateX(0);
+                opacity: 1;
+            }
+            to {
+                transform: translateX(100%);
+                opacity: 0;
+            }
+        }
+
+        .notification {
+            transition: all 0.3s ease;
+        }
+    </style>
+
+    <script src="app.js"></script>
+
+</body></html>
