@@ -1,0 +1,29 @@
+{
+  "name": "ocma-platform",
+  "version": "1.0.0",
+  "description": "OCMA (Omni-Channel Marketing Agent) Platform - Exported from OCMA Dashboard",
+  "main": "index.html",
+  "scripts": {
+    "start": "python -m http.server 8000",
+    "serve": "npx serve .",
+    "dev": "npx live-server"
+  },
+  "keywords": [
+    "marketing",
+    "automation",
+    "omni-channel",
+    "social-media",
+    "integrations"
+  ],
+  "author": "OCMA Platform",
+  "license": "MIT",
+  "devDependencies": {
+    "serve": "^14.0.0",
+    "live-server": "^1.2.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ocma-platform.git"
+  },
+  "homepage": "https://github.com/ocma-platform#readme"
+}
